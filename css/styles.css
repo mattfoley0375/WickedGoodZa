@@ -9,7 +9,7 @@ font-size: 100px;
 }
 
 img {
-  width: 1000px;
+  width: 900px;
   border-style: solid;
   border-color: darkred;
   height: auto;
@@ -17,5 +17,32 @@ img {
 
 p {
   font-size: 30px;
+  text-align: left;
+}
 
+.container {
+  font-size: 30px;
+}
+
+h3  {
+  font-size: 30px;
+}
+
+input[type='radio'] {
+  height: 20px;
+  width: 20px;
+}
+
+input[type='form-group'] {
+  height: 20px;
+  width: 20px;
+}
+
+div {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
