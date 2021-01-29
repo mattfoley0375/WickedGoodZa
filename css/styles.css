@@ -1,0 +1,21 @@
+.jumbotron {
+  color: rgb(0, 0, 0);
+  background-color: brown;
+  text-align: center;
+}
+
+h1 {
+font-size: 100px;
+}
+
+img {
+  width: 1000px;
+  border-style: solid;
+  border-color: darkred;
+  height: auto;
+}
+
+p {
+  font-size: 30px;
+
+}
