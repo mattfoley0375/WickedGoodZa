@@ -25,6 +25,14 @@ Za.prototype.total = function () {
     this.cartTotal += 10;
   }
 
+  if (this.sauce=== "Red") { 
+    this.cartTotal += 0;
+  } else if (this.sauce === "Garlic") {
+    this.cartTotal += 0;
+  } else if (this.size === "BBQ") {
+    this.cartTotal += 0;
+  }
+
   if (this.ZaToppings === "none") { 
     this.cartTotal += 0;
   } else if (this.ZaToppings === "pepperoni") {
@@ -42,10 +50,8 @@ Za.prototype.total = function () {
   } else {
     this.cartTotal += 0;
   }
-return this.CartTotal
+return this.cartTotal
 }
-
-
 
 //User Logic Bottom
 
@@ -53,7 +59,6 @@ $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
     event.preventDefault();
     let ZaOrder = new Za();
-
 
     let OrderSize = $("input:radio[name=size]:checked").val();
     ZaOrder.ZaSize(OrderSize); 
