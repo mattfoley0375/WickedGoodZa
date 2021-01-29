@@ -1,9 +1,16 @@
 //Business Logic Top
+
+//new ideas
+
+const pizza {
+  
+}
+
 function Za() {
   this.size = "";
   this.sauce = []
-  this.ZaToppings = 0;
-  this.cartTotal = 0;
+  this.ZaToppings = ;
+  this.cartTotal = ;
 }
 
 Za.prototype.ZaSize = function(size) {
