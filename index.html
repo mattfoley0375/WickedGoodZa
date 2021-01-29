@@ -21,25 +21,51 @@
         <h3>Select a Size</h3>
         <div class="radio">
           <label>
-            <input type="radio" name="size"><span class="label"> 8" Personal Pizza</span>
+            <input type="radio" name="size" value=8> 8" Personal Pizza
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="size"><span class="label"> 14" Regular Pizza</span>
+            <input type="radio" name="size" value=14> 14" Regular Pizza
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="size"><span class="label"> 20" Party Pizza</span>
+            <input type="radio" name="size" value=20>20" Party Pizza
           </label>
         </div>
-        
-
+        <form id= "sizeOptions">
+          <h3>Select a Sauce</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sauce" value="Red">Classic Red Sauce
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sauce" value="Garlic" >Garlic Parmesan Sauce
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sauce" value="BBQ">Smokey BBQ Sauce
+            </label>
+          </div>
+        <h3>Select Your Toppings</h3>
+        <div class="form-group">
+          <input type="checkbox" name="topping" value="none">No Toppings-Plain +$0<br>
+          <input type="checkbox" name="topping" value="pepperoni">Pepperoni +$1<br>
+          <input type="checkbox" name="topping" value="onion">Grilled Onions +$1<br>
+          <input type="checkbox" name="topping" value="peppers">Grilled Banana Peppers +$1<br>
+          <input type="checkbox" name="topping" value="chicken">BBQ Chicken +$2<br>
+          <input type="checkbox" name="topping" value="sausage">Italian Sausage +$2<br>
+          <input type="checkbox" name="topping" value="brisket">Smoked Brisket +$3<br>        
+        </div>
+        <button type="submit" class="btn btn-dark">Review Order</button>
       </form>
-
-
-
-
+      <div id="order">
+        <h3 class="result"><span id="orderResults"></span></h3>
+      </div>
+    </div>
 </body>
 </html>
