@@ -23,10 +23,10 @@ This is a website for a pizza company where a user can choose one or more indivi
 
 ## Specs
 
-Description: 
+Description: select Pizza size
 
-Test: 
-Expect: 
+Test: It will take the selected pizza size and add it to order
+Expect: (orderForm.ZaSize(personal).toEqual(this.size = "personal"));
 
 
 ## Known Bugs

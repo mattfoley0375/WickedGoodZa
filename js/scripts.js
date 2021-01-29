@@ -1,22 +1,22 @@
 //Business Logic Top
-function pizza() {
-  this.size
-  this.sauce
-  this.topping
+function Za() {
+  this.size = "";
+  this.sauce = 
+  this.topping =
 }
 
-pizza.prototype.pieSize = function(size) {
-
+Za.prototype.ZaSize = function(size) {
+  this.size += size;
 }
 
 
 //User Logic Bottom
 
-// User Interface Logic //
-
 $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
     event.preventDefault();
+    let ZaOrder = new Za();
 
 
-    let pieSize = $("input:radio[name=size]:checked").val();swfrwrf
+    let OrderSize = $("input:radio[name=size]:checked").val();
+    ZaOrder.ZaSize(OrderSize); 
