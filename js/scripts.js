@@ -14,6 +14,9 @@ Za.prototype.ZaToppings = function(toppings) {
   this.toppings.push(toppings);
 }
 
+Za.prototype.ToppingsTotal = function() {
+  this.ZaToppings += this.toppings;
+}
 
 
 Za.prototype.total = function () {
@@ -24,6 +27,7 @@ Za.prototype.total = function () {
   } else if (this.size === "Personal Pizza") {
     this.cartTotal += 10;
   }
+
 
   if (this.sauce=== "Red") { 
     this.cartTotal += 0;
@@ -56,10 +60,21 @@ return this.cartTotal
 //User Logic Bottom
 
 $(document).ready(function() {
-  $("form#orderForm").submit(function(event) {
+  $("form#menuOptions").submit(function(event) {
     event.preventDefault();
     let ZaOrder = new Za();
 
     let OrderSize = $("input:radio[name=size]:checked").val();
     ZaOrder.ZaSize(OrderSize); 
 
+    $("input:checkbox[name=topping]:checked").each(function() { 
+      let ArrayToppings = $(this).val();
+      ZaOrder.ZaToppings(ArrayToppings); 
+    });
+    ZaOrder.addToppingsQuantity(); 
+    $("#cost").text("$" + ZaOrder.total()); 
+    $("#size").text(ZaOrder.size);
+    $("#selectedToppings").text(ZaOrder.toppings.join(", "));
+    $("#OrderTotal").show(); 
+  });
+});
