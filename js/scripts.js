@@ -31,3 +31,4 @@ $(document).ready(function() {
 
     let OrderSize = $("input:radio[name=size]:checked").val();
     ZaOrder.ZaSize(OrderSize); 
+fff wefwef
