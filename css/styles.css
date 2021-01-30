@@ -13,7 +13,7 @@ img {
   border-color: darkred;
   height: auto;
   width: auto;
-  img-res
+  border-radius: 20%;
 }
 
 .responsive {
