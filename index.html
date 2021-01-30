@@ -17,7 +17,7 @@
       <br><h2>Traditional East Coast Pizza with a West Coast Twist!</h2><br>
         <p>We offer authentic "New York" style pizza with all of our dough, sauces, and cheeses made in-house. Our innovative and locally sourced topping combos add a West Coast twist that make it the best pizza in Portland!!!!</p>
     </div>
-    <div id="menuOptions" class ="container">
+      <div id="menuOptions" class= "container-size">
       <form id= "sizeOptions">
         <br><h3>Select a Size</h3>
         <div class="radio">
@@ -35,6 +35,8 @@
             <input type="radio" name="size" value=25>20" Party Pizza: $25
           </label>
         </div>
+    </div>
+    <div class= "container-sauce">
         <form id= "sauceOptions">
           <br><h3>Select a Sauce</h3>
           <div class="radio">
@@ -52,6 +54,8 @@
               <input type="radio" name="sauce" value="BBQ">Smokey BBQ Sauce
             </label>
           </div>
+    </div>
+    <div class= "container-topping">
         <br><h3>Select Toppings</h3>
         <div class="form-group">
           <div id="toppings">
@@ -64,13 +68,13 @@
           <input type="checkbox" name="topping" value="brisket">Smoked Brisket +$3<br>
           </div>        
         </div>
+    </div>
         <button type="submit" class="btn btn-dark">Review Order</button>
       </form>
       <div id="OrderTotal">
-        <h3><span id="size">Pizza</span><span> with </span><span id="sauce"></span>and <span id="selectedToppings"></span>on top! 
+        <h3 class="orderInfo"><span id="size">Pizza</span><span> with </span><span id="sauce"></span>and <span id="selectedToppings"></span>on top! 
         <h3 class="result"><span id="orderTotal"></span></h3>
         <h3>Total:<span id="cost"></h3>
-    </div>
     </div>
 </body>
 </html>

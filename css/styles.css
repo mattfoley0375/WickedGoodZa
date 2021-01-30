@@ -57,3 +57,42 @@ div {
 .container {
   margin-left: 20px;
 }
+
+.container-size {
+  width: 300px;
+  border: 15px solid brown;
+  padding: 30px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  font-style: oblique;
+}
+
+.container-sauce {
+  width: 300px;
+  border: 15px solid brown;
+  padding: 30px;
+  margin: 20px;
+  background-color:  rgb(255, 255, 255);
+  font-size: 20px;
+  padding-right: 20px;
+  font-style: oblique;
+}
+
+.container-topping {
+  width: 300px;
+  border: 15px solid brown;
+  padding: 10px;
+  margin: 20px;
+  background-color:  rgb(255, 255, 255);
+  font-style: oblique;
+}
+
+.btn {
+  margin-left: 20px;
+  width: 300px;
+}
+
+.orderInfo {
+  text-align: center;
+  margin-bottom: 100px;
+}
