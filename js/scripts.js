@@ -1,70 +1,37 @@
 //Business Logic Top
-
-//new ideas
-
-const pizza {
-
+const prices = {
+  personal: 10,
+  regular: 16,
+  party: 25,
+  Pepperoni: 1,
+  Onion: 1, 
+  Peppers: 1,
+  Chicken: 2,
+  Sausage: 2, 
+  Brisket: 3
 }
 
-/////
-
-
-function Za() {
-  this.size = "";
-  this.sauce = []
-  this.ZaToppings = ;
-  this.cartTotal = ;
+function Za(size, sauce, toppings) {
+  this.size = size;
+  this.sauce = sauce;
+  this.toppings = toppings;
 }
 
-Za.prototype.ZaSize = function(size) {
-  this.size += size;
+Za.prototype.calculatePrice = function() {
+  let price = 0;
+  price += prices[this.size.toLowerCase()];
+  this.toppings.forEach(function(topping) {
+    price += prices[topping] || 0;
+  });
+  return price;
 }
 
-Za.prototype.ZaToppings = function(toppings) {
-  this.toppings.push(toppings);
-}
-
-Za.prototype.ToppingsTotal = function() {
-  this.ZaToppings += this.toppings;
-}
-
-
-Za.prototype.total = function () {
-  if (this.size === "Party Pizza") { 
-    this.cartTotal += 25;
-  } else if (this.size === "Regular Pizza") {
-    this.cartTotal += 16;
-  } else if (this.size === "Personal Pizza") {
-    this.cartTotal += 10;
-  }
-
-
-  if (this.sauce=== "Red") { 
-    this.cartTotal += 0;
-  } else if (this.sauce === "Garlic") {
-    this.cartTotal += 0;
-  } else if (this.size === "BBQ") {
-    this.cartTotal += 0;
-  }
-
-  if (this.ZaToppings === "none") { 
-    this.cartTotal += 0;
-  } else if (this.ZaToppings === "pepperoni") {
-    this.cartTotal += 1;
-  } else if (this.ZaToppings === "onion") {
-    this.cartTotal += 1;
-  } else if (this.ZaToppings === "peppers") {
-    this.cartTotal += 1;
-  } else if (this.ZaToppings === "chicken") {
-    this.cartTotal += 2;
-  } else if (this.ZaToppings === "sausage") {
-    this.cartTotal += 2;
-  } else if (this.ZaToppings === "brisket") {
-    this.cartTotal += 3;
-  } else {
-    this.cartTotal += 0;
-  }
-return this.cartTotal
+Za.prototype.getSummary = function() {
+  let summary = ""
+  summary += this.size + " Pizza with "
+  summary += this.sauce +  ", "
+  summary += this.toppings.join(", ")
+    return summary
 }
 
 //User Logic Bottom
@@ -72,20 +39,19 @@ return this.cartTotal
 $(document).ready(function() {
   $("form#sizeOptions").submit(function(event) {
     event.preventDefault();
-    let ZaOrder = new Za();
 
-    let OrderSize = $("input:radio[name=size]:checked").val();
-    ZaOrder.ZaSize(OrderSize); 
+    const size = $("input:radio[name=size]:checked").val();
+    const sauce = $("input:radio[name=sauce]:checked").val();
+    const toppings = $("input:checkbox[name=topping]:checked").map(function(){
+      return $(this).val();
+    }).get();
 
-    $("input:checkbox[name=topping]:checked").each(function() { 
-      let ArrayToppings = $(this).val();
-      debugger
-      ZaOrder.ZaToppings(ArrayToppings); 
-    });
-    ZaOrder.addToppingsQuantity(); 
-    $("#cost").text("$" + ZaOrder.total()); 
-    $("#size").text(ZaOrder.size);
-    $("#selectedToppings").text(ZaOrder.toppings.join(", "));
+    const za = new Za(size, sauce, toppings)
+    const price = za.calculatePrice()
+
+    $("#cost").text("$"+ price);
+    $("#summary").text(za.getSummary());
     $("#OrderTotal").show(); 
+    
   });
 });

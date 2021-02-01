@@ -7,7 +7,7 @@
   <script src="js/scripts.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WGZ!</title>
+  <title>Wicked Good Za!</title>
 </head>
 <body>
   <div class="header">
@@ -15,66 +15,64 @@
       <h1>Wicked Good Za!</h1><br>
       <br><h2 class="slogan">"Traditional East Coast Pizza with some West Coast love!"</h2><br>
       <img alt="beautiful gif of pizza" class="responsive" src="img/pizza2.gif"><br>
-        <p class="about">We offer authentic "New York" style pizza with all of our dough, sauces, and cheeses made in-house. Our locally sourced toppings make it the best pizza in Portland!</p>
+      <p class="about">We offer authentic "New York" style pizza with all of our dough, sauces, and cheeses made in-house. Our locally sourced toppings make it the best pizza in Portland!</p>
     </div>
       <div id="menuOptions" class= "container-size">
-      <form id= "sizeOptions">
-        <br><h3>Select a Size</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value=10> 8" Personal Pizza: $10
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value=16> 14" Regular Pizza: $16
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value=25>20" Party Pizza: $25
-          </label>
-        </div>
-    </div>
-    <div class= "container-sauce">
+        <form id= "sizeOptions">
+          <br><h3>Select a Size</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="Personal"> 8" Personal Pizza: $10
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="Regular"> 14" Regular Pizza: $16
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="Party">20" Party Pizza: $25
+            </label>
+          </div>
+      </div>
+      <div class= "container-sauce">
         <form id= "sauceOptions">
           <br><h3>Select a Sauce</h3>
           <div class="radio">
             <label>
-              <input type="radio" name="sauce" value="Red">Classic Red Sauce
+              <input type="radio" name="sauce" value="Classic Red Sauce">Classic Red Sauce
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="sauce" value="Garlic" >Garlic Parmesan Sauce
+              <input type="radio" name="sauce" value="Garlic Parmesan Sauce" >Garlic Parmesan Sauce
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="sauce" value="BBQ">Smokey BBQ Sauce
+              <input type="radio" name="sauce" value="Smokey BBQ Sauce">Smokey BBQ Sauce
             </label>
           </div>
     </div>
     <div class= "container-topping">
-        <br><h3>Select Toppings</h3>
-        <div class="form-group">
-          <div id="toppings">
-          <input type="checkbox" name="topping" value="none">No Toppings-Plain +$0<br>
-          <input type="checkbox" name="topping" value="pepperoni">Pepperoni +$1<br>
-          <input type="checkbox" name="topping" value="onion">Grilled Onions +$1<br>
-          <input type="checkbox" name="topping" value="peppers">Grilled Banana Peppers +$1<br>
-          <input type="checkbox" name="topping" value="chicken">BBQ Chicken +$2<br>
-          <input type="checkbox" name="topping" value="sausage">Italian Sausage +$2<br>
-          <input type="checkbox" name="topping" value="brisket">Smoked Brisket +$3<br>
-          </div>        
-        </div>
+      <br><h3>Select Toppings</h3>
+      <div class="form-group">
+        <div id="toppings">
+          <input type="checkbox" name="topping" value="Pepperoni">Pepperoni +$1<br>
+          <input type="checkbox" name="topping" value="Onion">Onions +$1<br>
+          <input type="checkbox" name="topping" value="Peppers">Peppers +$1<br>
+          <input type="checkbox" name="topping" value="Chicken">Chicken +$2<br>
+          <input type="checkbox" name="topping" value="Sausage">Sausage +$2<br>
+          <input type="checkbox" name="topping" value="Brisket">Brisket +$3<br>
+        </div>        
+      </div>
     </div>
         <button type="submit" class="btn btn-dark">Review Order</button>
       </form>
       <div id="OrderTotal">
-        <h3 class="orderInfo"><span id="size">Pizza</span><span> with </span><span id="sauce"></span>and <span id="selectedToppings"></span>on top! 
-        <h3 class="result"><span id="orderTotal"></span></h3>
-        <h3>Total:<span id="cost"></h3>
+        <h4 id="summary"></h4>
+        <h4 class="orderOutput">Total:<span id="cost"></h4>
     </div>
 </body>
 </html>

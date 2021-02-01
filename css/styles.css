@@ -23,7 +23,6 @@ img {
   height: auto;
 }
 
-
 p {
   font-size: 30px;
   text-align: left;
@@ -35,6 +34,7 @@ p {
 
 h3  {
   font-size: 30px;
+  text-align: center;
 }
 
 input[type='radio'] {
@@ -66,26 +66,28 @@ div {
   padding: 30px;
   margin: 20px;
   background-color: rgb(255, 255, 255);
+  font-style: oblique;
+  font-size: 20px;
   }
 
 .container-sauce {
   width: 300px;
   border: 15px solid brown;
-  padding: 30px;
+  padding: 20px;
+  padding-top: 2px;
   margin: 20px;
   background-color:  rgb(255, 255, 255);
   font-size: 20px;
-  padding-right: 20px;
   font-style: oblique;
- }
+}
 
 .container-topping {
   width: 300px;
   border: 15px solid brown;
-  padding: 10px;
-  margin: 20px;
+  padding: 5px;
   background-color:  rgb(255, 255, 255);
   font-style: oblique;
+  font-size: 20px;
 }
 
 .btn {
@@ -105,4 +107,21 @@ div {
 
 .slogan {
   font-style: oblique;
+}
+
+.container-size, .container-sauce, .container-topping {
+  width: 30%;
+  display: inline-block;
+}
+
+body {
+  background-color: black;
+}
+
+#OrderTotal {
+  color: white;
+}
+
+#cost {
+  color: green;
 }

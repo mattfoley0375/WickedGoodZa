@@ -3,7 +3,7 @@ Wicked Good Za
 
 #### By Matthew Foley
 
-## Techologies Used
+## Technologies Used
 
 * GIT
 * HTML
@@ -23,10 +23,19 @@ This is a website for a pizza company where a user can choose one or more indivi
 
 ## Specs
 
-Description: select Pizza size
+Description: select Pizza order
 
 Test: It will take the selected pizza size and add it to order
-Expect: (orderForm.ZaSize(personal).toEqual(this.size = "personal"));
+Expect: Za(size) toEqual [pizza size selections]
+
+Test: It will take the selected pizza sauce and add it to order
+Expect: Za(sauce) toEqual [pizza sauce selections]
+
+Test: It will take the selected pizza toppings and add it to order
+Expect: Za(toppings) toEqual [pizza toppings]
+
+Test: It will take all the options and add them together
+Expect: .getSummary
 
 
 ## Known Bugs
